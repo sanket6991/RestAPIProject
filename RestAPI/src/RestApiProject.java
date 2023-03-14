@@ -4,7 +4,7 @@ import static org.hamcrest.Matchers.equalTo;
 import Files.Payload;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-public class RestApi {
+public class RestApiProject{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

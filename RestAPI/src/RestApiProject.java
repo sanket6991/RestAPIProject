@@ -30,7 +30,7 @@ public class RestApiProject{
 				+ "\"address\":\"narsoba galli, tasgson\",\r\n"
 				+ "\"key\":\"qaclick123\"\r\n"
 				+ "}").when().put("/maps/api/place/update/json").then().log().all().assertThat().statusCode(200)
-		.body("msg", equalTo("Address Successfully Updated"));
+		.body("msg", equalTo("Address successfully updated"));
 	}
 
 }

@@ -13,12 +13,38 @@ public class Payload {
 	}
 
 	public static String coursePrice() {
-		return "{\n" + "\n" + "\"dashboard\": {\n" + "\n" + "\"purchaseAmount\": 910,\n" + "\n"
-				+ "\"website\": \"rahulshettyacademy.com\"\n" + "\n" + "},\n" + "\n" + "\"courses\": [\n" + "\n" + "{\n"
-				+ "\n" + "\"title\": \"Selenium Python\",\n" + "\n" + "\"price\": 50,\n" + "\n" + "\"copies\": 6\n"
-				+ "\n" + "},\n" + "\n" + "{\n" + "\n" + "\"title\": \"Cypress\",\n" + "\n" + "\"price\": 40,\n" + "\n"
-				+ "\"copies\": 4\n" + "\n" + "},\n" + "\n" + "{\n" + "\n" + "\"title\": \"RPA\",\n" + "\n"
-				+ "\"price\": 45,\n" + "\n" + "\"copies\": 10\n" + "\n" + "}\n" + "\n" + "]\n" + "\n" + "}";
+		return "{\r\n" + 
+				"  \"dashboard\": {\r\n" + 
+				"    \"purchaseAmount\": 1162,\r\n" + 
+				"    \"website\": \"rahulshettyacademy.com\"\r\n" + 
+				"  },\r\n" + 
+				"  \"courses\": [\r\n" + 
+				"    {\r\n" + 
+				"      \"title\": \"Selenium Python\",\r\n" + 
+				"      \"price\": 50,\r\n" + 
+				"      \"copies\": 6\r\n" + 
+				"    },\r\n" + 
+				"    {\r\n" + 
+				"      \"title\": \"Cypress\",\r\n" + 
+				"      \"price\": 40,\r\n" + 
+				"      \"copies\": 4\r\n" + 
+				"    },\r\n" + 
+				"    {\r\n" + 
+				"      \"title\": \"RPA\",\r\n" + 
+				"      \"price\": 45,\r\n" + 
+				"      \"copies\": 10\r\n" + 
+				"    },\r\n" + 
+				"     {\r\n" + 
+				"      \"title\": \"Appium\",\r\n" + 
+				"      \"price\": 36,\r\n" + 
+				"      \"copies\": 7\r\n" + 
+				"    }\r\n" + 
+				"    \r\n" + 
+				"    \r\n" + 
+				"    \r\n" + 
+				"  ]\r\n" + 
+				"}\r\n" + 
+				"";
 	
 	
 	}

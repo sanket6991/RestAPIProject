@@ -4,7 +4,7 @@ import io.restassured.path.json.JsonPath;
 public class ComplexJsonParser {
 
 	public static void main(String[] args) {
-		int a = 0;
+		
 
 		// TODO Auto-generated method stub
 

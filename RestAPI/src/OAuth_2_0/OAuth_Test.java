@@ -35,12 +35,16 @@ public class OAuth_Test {
 		  org.openqa.selenium.chrome.ChromeOptions();
 		  ops.addArguments("--remote-allow-origins=*"); 
 		  ops.addArguments("--disable");
+			/*
+			 * ChromeOptions handlingSSL = new ChromeOptions();
+			 * handlingSSL.setAcceptInsecureCerts(true);
+			 */
 		  org.openqa.selenium.remote.DesiredCapabilities cp = new
 		  org.openqa.selenium.remote.DesiredCapabilities();
 		  cp.setCapability(org.openqa.selenium.chrome.ChromeOptions.CAPABILITY, ops);
-		  ops.addArguments("--disable-web-security","--user-data-dir=true","--allow-running-insecure-content" );
+		  ops.addArguments("--accept-insecure-certs=true","--disable-web-security","--user-data-dir=true","--allow-running-insecure-content" );
 		  ops.merge(cp);
-		  
+			  
 		 
 		driver = new ChromeDriver(ops);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));

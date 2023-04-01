@@ -18,7 +18,7 @@ public class JiraTest {
 		SessionFilter session = new SessionFilter();
 		
 //Login Scenario
-		given().header("Content-Type", "application/json")
+		given().relaxedHTTPSValidation().header("Content-Type", "application/json")
 				.body("{\n" + "\n" + "    \"username\": \"sanketchakradeo\",\n"
 						+ "    \"password\": \"7tUxrLrGKFe8p5Z\"\n" + "}")
 				.log().all().filter(session).when().post("rest/auth/1/session").then().log().all().extract().response()
@@ -26,7 +26,7 @@ public class JiraTest {
 		
 //Add comment
 		String expectedMessage="Hi, How are you?";
-	String addCommentResponse =	given().pathParam("id", "10100").log().all().header("Content-Type", "application/json")
+	String addCommentResponse =	given().relaxedHTTPSValidation().pathParam("id", "10100").log().all().header("Content-Type", "application/json")
 				.body("{\n" + "    \"body\": \""+expectedMessage+"\",\n" + "    \"visibility\": {\n"
 						+ "        \"type\":\"role\",\n" + "        \"value\":\"Administrators\"\n" + "    }\n" + "}")
 				.filter(session).when().post("/rest/api/2/issue/{id}/comment").then().log().all().assertThat()
@@ -40,7 +40,7 @@ public class JiraTest {
 				.post("rest/api/2/issue/{id}/attachments").then().log().all().assertThat().statusCode(200);
 		
 //Get Issue
-		String issueDetails = given().filter(session).pathParam("id", "10100").queryParam("fields", "comment").get("/rest/api/2/issue/{id}").then().log().all().extract().response().toString();
+		String issueDetails = given().relaxedHTTPSValidation().filter(session).pathParam("id", "10100").queryParam("fields", "comment").get("/rest/api/2/issue/{id}").then().log().all().extract().response().toString();
         System.out.println(issueDetails);
 		// TODO Auto-generated method stub
         

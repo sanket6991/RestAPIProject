@@ -41,7 +41,7 @@ ResponseSpecification resspec = new ResponseSpecBuilder().expectStatusCode(200).
 RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
 .setContentType(ContentType.JSON).build();
 
-RequestSpecification res=given().spec(req).body(serialize);
+RequestSpecification res=given().relaxedHTTPSValidation().spec(req).body(serialize);
 
 Response response = res.when().log().all().post("maps/api/place/add/json")
 .then().spec(resspec).extract().response();

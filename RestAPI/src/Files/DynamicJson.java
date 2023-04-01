@@ -13,7 +13,7 @@ public class DynamicJson {
 	@Test(dataProvider="BooksData")
 	public void addBook(String isbn , String aisle) {
 		RestAssured.baseURI = "http://216.10.245.166";
-		String response = given().log().all().header("Content-Type", "Application/json").body(Payload.addBook(isbn,aisle)).when()
+		String response = given().relaxedHTTPSValidation().log().all().header("Content-Type", "Application/json").body(Payload.addBook(isbn,aisle)).when()
 				.post("/Library/Addbook.php").then().log().all().assertThat().statusCode(200).extract().response().asString();
 		JsonPath js = ReUsableMethods.rawToJson(response);
 		String id = js.get("ID");
